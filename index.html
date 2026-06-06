@@ -24,13 +24,22 @@
     </div>
 
     <script>
-        function startSite() {
-            // Play the music
-            document.getElementById('bg-audio').play();
-            // Hide the overlay button
-            document.getElementById('overlay').style.display = 'none';
-        }
-    </script>
+    function startSite() {
+        // Find both elements
+        var audio = document.getElementById('bg-audio');
+        var video = document.getElementById('bg-video');
+
+        // Unmute and play the audio track
+        audio.play();
+
+        // Hard-trigger the video loop to ensure it forces past browser limits
+        video.muted = true; // Must stay muted for mobile compatibility
+        video.play();
+
+        // Hide the overlay button
+        document.getElementById('overlay').style.display = 'none';
+    }
+</script>
 
 </body>
 </html>
