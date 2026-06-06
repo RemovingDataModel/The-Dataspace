@@ -17,23 +17,21 @@ body, html {
     min-height: 100%;
     width: auto;
     height: auto;
-    z-index: -100;
-    background-size: cover;
+    z-index: -1; /* Pushes the video to the very bottom layer */
     object-fit: cover;
 }
 
-/* Fullscreen clickable overlay */
 #overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Darkens screen until clicked */
+    background-color: rgba(0, 0, 0, 0.8); /* Ensures it's slightly see-through */
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
+    z-index: 10; /* Keeps the button on top of everything else */
     cursor: pointer;
 }
 
