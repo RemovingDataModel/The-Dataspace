@@ -9,9 +9,10 @@
 <body>
 
     <!-- Background Video (Muted so it auto-plays) -->
-    <video autoplay loop muted playsinline id="bg-video">
-        <source src="Video.mp4" type="video/mp4">
-    </video>
+    <video autoplay loop muted playsinline id="bg-video" preload="auto">
+    <source src="Video.webm" type="video/webm">
+    <source src="Video.mp4" type="video/mp4">
+</video>
 
     <!-- Background Music -->
     <audio id="bg-audio" loop>
